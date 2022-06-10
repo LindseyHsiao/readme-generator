@@ -4,10 +4,10 @@ const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
+
     //function to attain answers from user
     
-    return inquirer.prompt([
+const questions =[
         {
             type: 'input',
             name: 'projectTitle',
@@ -56,22 +56,22 @@ const promptUser = () => {
             //validate
         },
 
-    ]);
-};
+    ];
+
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, JSON.stringify(data), (err) => {
-//         err ? console.error(err) : console.log("README.md file is created.");
-//     });
-// }
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.error(err) : console.log("README.md file is created.");
+    });
+}
 
 // TODO: Create a function to initialize app
-const init = async () => {
-    let userInput = await promptUser();
-    let markDownText = generateMarkdown(userInput);
-    writeToFile('README.md', markDownText);
-    //console.log(userInput);
+function init(){
+    inquirer.prompt(questions).then(function(response){
+        console.log(response)
+        writeToFile('README.md', generateMarkdown(response))
+    })
 }
 // Function call to initialize app
 
