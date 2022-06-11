@@ -15,6 +15,7 @@ function renderLicenseLink(license) {
   }
   return '* [License](#license)'
 
+  //study group function
   //function renderLicenseLink(license) {
    // return `https://choosealicense.com/licenses/${license.toLowerCase().replace("","-")}/`;
   //}
@@ -22,7 +23,18 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {
+  let licenseLink = renderLicenseLink(license);
+
+  if (license === "None") {
+    return '';
+  }
+  return 
+  `## License
+  
+  This project has the ${license} license, you can find the license here: ${licenseLink}`;
+ }
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -38,6 +50,11 @@ function generateMarkdown(data) {
   
   * [Installation](#installation)
   ${renderLicenseLink(data.projectLicense)}
+  * [Usage] (#usage)
+  * [License] (#license)
+  * [Contributing] (#contributing)
+  * [Test] (#test)
+  * [Questions] (#questions)
 
 
   ## Installation 
