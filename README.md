@@ -1,8 +1,10 @@
-# hi
+# README Generator
   ![license badge](https://img.shields.io/static/v1?label=license&message=-MIT&color=red)
   ## Description
 
-  hi
+  This application generates a README.md file with user input.
+
+  [Video Walkthrough](https://drive.google.com/file/d/1iJQpYX3XIX7LSVOTCbDJpLmU13lmZam2/view?usp=sharing)
 
   ## Table of Contents
   
@@ -15,25 +17,25 @@
 
 
   ## Installation 
-  hi
+  Run the app in the command line using js node.
 
   ## Usage
-  hi
+  Use in the command line with js node.
   
   ## License
   MIT
 
   ## Contributing
-  hi
+  N/A
   
   ## Tests
-  hi
+  N/A
   
   ## Questions
 
   If you have any questions, feel free to contact me via email or GitHub.
-  hi
-  hi
+  lindseyhsiao
+  lindsey350@aol.com
 
   ## License
   
